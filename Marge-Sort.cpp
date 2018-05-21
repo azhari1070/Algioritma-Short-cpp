@@ -1,34 +1,32 @@
-#include <cstdlib>
 #include <iostream>
-
-using namespace std;
+Using namespace std;
 
 void Merge(int* A, int kiri,int tengah, int kanan){
 int B[kiri+kanan];
-int i,kidal1,kidal2;
-kidal1=kiri;
-kidal2=tengah+1;
+int i,bagian1,bagian2;
+bagian1=kiri;
+bagian2=tengah+1;
 i=kiri;
-while (kidal1<=tengah && kidal2 <= kanan){
-if(A[kidal1] <= A[kidal2]){
-B[i]=A[kidal1];
-kidal1++;
+while (bagian1<=tengah && bagian2 <= kanan){
+if(A[bagian1] <= A[bagian2]){
+B[i]=A[bagian1];
+bagian1++;
 }
 else{
-B[i]=A[kidal2];
-kidal2++;
+B[i]=A[bagian2];
+Bagian2++;
 }
 i++;
 }
-    while ( kidal1 <= tengah ){
-        B[i] = A[kidal1];
-        kidal1++;
+    while ( bagian1 <= tengah ){
+        B[i] = A[bagian1];
+        bagian1++;
         i++;
         }
 
-    while ( kidal2 <= kanan ){
-        B[i] = A[kidal2];
-        kidal2++;
+    while ( bagian2 <= kanan ){
+        B[i] = A[bagian2];
+        bagian2++;
         i++;
         }
 
@@ -53,23 +51,23 @@ int main(int argc, char *argv[])
 int n;
 int i;
 int j;
-cout<<"Merge Sort with Divide and Conquer Algoritm"; 
+cout<<"Rifky,Iqbal,Azhari"; 
 cout<<"Banyak data :";
 cin>>n;
 i=1;
 j=n;
 int A[n];
 for (int x=1;x<=n;x++){
-cout<<"masukan data ke-"<<x<<" : ";
+cout<<"Masukan data ke-"<<x<<" : ";
 cin>>A[x];
 }
-cout<<"Data sebelum diurutkan "<<endl; 
+cout<<"Data Sebelum diurutkan "<<endl; 
 for (int x=1;x<=j;x++){
 cout<<A[x]<<" ";
     }
     cout<<endl;
 MergeSort(A,i,j);
-cout<<"Data setelah diurutkan "<<endl; 
+cout<<"Data Setelah diurutkan "<<endl; 
 for (int x=1;x<=j;x++){
 cout<<A[x]<<" ";
     }
